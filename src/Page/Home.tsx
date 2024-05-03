@@ -1,7 +1,7 @@
 import React from 'react'
-import Header from '../Components/Header'
-import HeroLeft from '../Components/HeroLeft'
-import HeroRight from '../Components/HeroRight'
+import Header from '../components/Header'
+import HeroLeft from '../components/HeroLeft'
+import HeroRight from '../components/HeroRight'
 const Home: React.FC = () => {
     return (
         <>
