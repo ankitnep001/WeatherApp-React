@@ -1,16 +1,20 @@
 import React from 'react'
 import Header from '../components/Header'
-import HeroLeft from '../components/HeroLeft'
-import HeroRight from '../components/HeroRight'
+import TodayWeather from '../components/TodayWeather'
+import Hourly from '../components/Hourly'
+// import Api from '../api/Api'
+
 const Home: React.FC = () => {
     return (
         <>
-
             <Header />
-            <div className='flex flex-row '>
-                <HeroLeft />
-                <HeroRight />
+            <div className='flex flex-col justify-center items-center'>
+                <TodayWeather />
+                <Hourly />
+                {/* <Api /> */}
             </div>
+
+
 
         </>
     )
