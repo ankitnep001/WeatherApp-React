@@ -13,7 +13,7 @@ const DateTime: React.FC = () => {
     })
     return (
         <div >
-            Date: {new Date(date).toLocaleString()}
+            Date: {new Date(date).toLocaleDateString()}
         </div>
     )
 }

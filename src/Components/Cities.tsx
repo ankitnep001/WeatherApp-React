@@ -15,7 +15,7 @@ const Cities: React.FC<CityProps> = ({ city, onCityChange }) => {
 
 
     return (
-        <div className='p-2 m-5 flex flex-row justify-around'>
+        <div className='p-2 m-5 flex flex-row justify-between'>
             <select value={city}
                 onChange={handleCityChange}
                 className='focus:outline-none'>
