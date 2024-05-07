@@ -4,6 +4,7 @@ import DateTime from './DateTime'
 interface CityProps {
     city: string,
     onCityChange: (city: string) => void;
+
 }
 
 const Cities: React.FC<CityProps> = ({ city, onCityChange }) => {
@@ -18,7 +19,7 @@ const Cities: React.FC<CityProps> = ({ city, onCityChange }) => {
         <div className='p-2 m-5 flex flex-row justify-between'>
             <select value={city}
                 onChange={handleCityChange}
-                className='focus:outline-none'>
+                className='focus:outline-none rounded-2xl '>
                 <option value="kathmandu">Kathmandu</option>
                 <option value="biratnagar">Biratnagar</option>
                 <option value="pokhara">Pokhara</option>

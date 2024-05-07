@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-
+import { MdDateRange } from "react-icons/md";
 const DateTime: React.FC = () => {
     const [date, setDate] = useState<number>(Date.now());
 
@@ -12,8 +12,8 @@ const DateTime: React.FC = () => {
         };
     })
     return (
-        <div >
-            Date: {new Date(date).toLocaleDateString()}
+        <div className='flex py-2'>
+            <MdDateRange size={25} />{new Date(date).toLocaleDateString()}
         </div>
     )
 }
