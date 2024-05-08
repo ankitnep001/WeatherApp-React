@@ -10,8 +10,6 @@ const Home: React.FC = () => {
             <Header />
             <div className='flex flex-col justify-center items-center'>
                 <TodayWeather />
-                {/* <Hourly /> */}
-                {/* <Api /> */}
             </div>
 
 
