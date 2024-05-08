@@ -7,19 +7,20 @@ interface WeatherData {
         temp: number,
     },
     weather: {
-        main: string
+        main: string,
+        description: string,
     }[],
 }
-
 interface ApiProps {
     location: string,
     tempUpdate: (temp: number) => void;
     weatherUpdate: (weather: string) => void,
+    descriptionUpdate: (description: string) => void,
 }
-const Api: React.FC<ApiProps> = ({ location, tempUpdate, weatherUpdate }) => {
+const Api: React.FC<ApiProps> = ({ location, tempUpdate, weatherUpdate, descriptionUpdate }) => {
 
     const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
-    const [loading, setLoading] = useState<boolean>(true);
+    // const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -29,12 +30,12 @@ const Api: React.FC<ApiProps> = ({ location, tempUpdate, weatherUpdate }) => {
                 setWeatherData(data);
                 tempUpdate(data.main.temp);
                 weatherUpdate(data.weather[0].main);
+                descriptionUpdate(data.weather[0].description);
+
             } catch (error) {
                 console.error('Error fetching weather data:', error);
             }
-            finally {
-                setLoading(false);
-            }
+
         };
         fetchData();
     }, [location, tempUpdate, weatherUpdate]);

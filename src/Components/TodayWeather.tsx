@@ -6,24 +6,25 @@ import WeatherImage from "./WeatherImage";
 
 const TodayWeather: React.FC = () => {
 
-
     const [city, setCity] = useState<string>("kathmandu");
     const [temp, setTemp] = useState<number>(20);
-    const [weather, setWeather] = useState<string>("")
+    const [weather, setWeather] = useState<string>("");
+    const [description, setDescription] = useState<string>("");
 
     const handleCityChange = (city: string) => {
         setCity(city);
     };
+
     return (
-        <div className="mb-4 w-[70dvw]  bg-[#BBD0FF]  h-[90vh] mx-10">
+        <div className="mb-4 w-[70dvw]  bg-gray-100  mx-10 flex flex-col justify-center rounded-3xl shadow-xl">
 
             <Cities city={city} onCityChange={handleCityChange} />
 
-            <Api location={city} tempUpdate={setTemp} weatherUpdate={setWeather} />
+            <Api location={city} tempUpdate={setTemp} weatherUpdate={setWeather} descriptionUpdate={setDescription} />
 
             <div className="flex flex-row justify-around items-center">
                 <WeatherDisplay temperature={temp} />
-                <WeatherImage weather={weather} />
+                <WeatherImage weather={weather} description={description} />
             </div>
 
         </div>
