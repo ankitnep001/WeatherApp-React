@@ -3,6 +3,7 @@ import Api from "../api/Api"
 import { useState } from "react";
 import WeatherDisplay from "./WeatherDisplay";
 import WeatherImage from "./WeatherImage";
+import Hourly from "./Hourly";
 
 const TodayWeather: React.FC = () => {
 
@@ -23,10 +24,11 @@ const TodayWeather: React.FC = () => {
             <Api location={city} tempUpdate={setTemp} weatherUpdate={setWeather} descriptionUpdate={setDescription} />
 
             <div className="flex flex-row justify-around items-center">
-                <WeatherDisplay temperature={temp} />
+                <WeatherDisplay location={city} temperature={temp} />
                 <WeatherImage weather={weather} description={description} />
             </div>
 
+            <Hourly location={city} />
         </div>
     )
 }
