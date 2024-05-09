@@ -4,6 +4,7 @@ import { useState } from "react";
 import WeatherDisplay from "./WeatherDisplay";
 import WeatherImage from "./WeatherImage";
 import FiveDays from "./FiveDays";
+import DateTime from "./DateTime";
 
 const TodayWeather: React.FC = () => {
 
@@ -17,19 +18,23 @@ const TodayWeather: React.FC = () => {
     };
 
     return (
-        <div className="mb-4 w-[70dvw]  bg-gray-100  mx-10 flex flex-col justify-center rounded-3xl shadow-xl">
+        <>
 
-            <Cities city={city} onCityChange={handleCityChange} />
+            <div className="mb-4 w-[70dvw]  bg-gray-100  mx-10 flex flex-col justify-center rounded-3xl shadow-xl">
+                <DateTime />
+                <Cities city={city} onCityChange={handleCityChange} />
 
-            <Api location={city} tempUpdate={setTemp} weatherUpdate={setWeather} descriptionUpdate={setDescription} />
+                <Api location={city} tempUpdate={setTemp} weatherUpdate={setWeather} descriptionUpdate={setDescription} />
 
-            <div className="flex flex-row justify-around items-center">
-                <WeatherDisplay location={city} temperature={temp} />
-                <WeatherImage weather={weather} description={description} />
+                <div className="flex flex-col md:flex-row justify-around items-center">
+                    <WeatherDisplay location={city} temperature={temp} />
+                    <WeatherImage weather={weather} description={description} />
+                </div>
+
+                <FiveDays location={city} />
             </div>
+        </>
 
-            <FiveDays location={city} />
-        </div>
     )
 }
 

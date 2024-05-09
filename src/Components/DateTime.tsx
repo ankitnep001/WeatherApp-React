@@ -12,7 +12,7 @@ const DateTime: React.FC = () => {
         };
     })
     return (
-        <div className='flex py-2'>
+        <div className='flex justify-center md:justify-end py-2 mx-10'>
             <MdDateRange size={25} />{new Date(date).toLocaleDateString()}
         </div>
     )
