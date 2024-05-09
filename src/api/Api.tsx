@@ -35,7 +35,6 @@ const Api: React.FC<ApiProps> = ({ location, tempUpdate, weatherUpdate, descript
             } catch (error) {
                 console.error('Error fetching weather data:', error);
             }
-
         };
         fetchData();
     }, [location, tempUpdate, weatherUpdate]);
