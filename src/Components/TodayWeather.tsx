@@ -3,7 +3,7 @@ import Api from "../api/Api"
 import { useState } from "react";
 import WeatherDisplay from "./WeatherDisplay";
 import WeatherImage from "./WeatherImage";
-import Hourly from "./Hourly";
+import FiveDays from "./FiveDays";
 
 const TodayWeather: React.FC = () => {
 
@@ -28,7 +28,7 @@ const TodayWeather: React.FC = () => {
                 <WeatherImage weather={weather} description={description} />
             </div>
 
-            <Hourly location={city} />
+            <FiveDays location={city} />
         </div>
     )
 }
