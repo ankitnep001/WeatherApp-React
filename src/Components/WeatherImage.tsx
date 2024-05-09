@@ -28,8 +28,8 @@ const WeatherImage: React.FC<WeatherProps> = ({ weather, description }) => {
     }
     return (
         <div className='w-[10dvw] flex flex-col justify-between items-center'>
-            {weatherImage && <img src={weatherImage} alt={weather} />}
-            {description}
+            {weatherImage && <img className='' src={weatherImage} alt={weather} />}
+            <p className='text-xs md:text-lg '>{description}</p>
         </div>
     )
 }

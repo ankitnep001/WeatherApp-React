@@ -58,7 +58,7 @@ const FiveDays: React.FC<DailyProps> = ({ location }) => {
                             className="flex flex-col justify-center items-center  m-2  w-40 h-28 rounded-lg shadow-shadow tracking-wider "
                             key={index}>
                             <p>{currentDate.toLocaleDateString()}</p>
-                            <p>{(hourlyData.main.temp - 273.15).toFixed(2)}&deg;Celcius</p>
+                            <p>{(hourlyData.main.temp - 273.15).toFixed(2)}&deg;<span className="text-lg">C</span></p>
                             {hourlyData.weather.length > 0 && <p>{hourlyData.weather[0].main}</p>}
                         </div>
                     );
