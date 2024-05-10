@@ -47,22 +47,4 @@ const Api: React.FC<ApiProps> = ({ location, tempUpdate, weatherUpdate, descript
 
 export default Api
 
-// (
-//     <div>
-//         {loading ? (
-//             <p>Loading...</p>
-//         ) : (
-//             <div className="text-2xl p-4 px-2">
-//                 {
-//                     weatherData && (
-//                         <div >
-//                             {weatherData.name}
-//                             {weatherData.main.temp}
-//                             {weatherData.weather[0].main}
-//                         </div>
-//                     )
-//                 }
-//             </div>
-//         )}
-//     </div>
-// );
+

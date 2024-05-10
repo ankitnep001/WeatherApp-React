@@ -26,13 +26,16 @@ const FiveDays: React.FC<DailyProps> = ({ location }) => {
                 const response = await fetch(`${import.meta.env.VITE_WEATHER_API_URL}/forecast?q=${location}&appid=${import.meta.env.VITE_API_KEY}`);
                 const data: DailyWeather = await response.json();
                 setHourlyWeather(data);
+
             } catch (error) {
                 console.error('Error fetching weather data:', error);
             }
         };
         fetchData();
     }, [location]);
-    // console.log(hourlyWeather);
+    console.log("hello");
+
+    console.log(hourlyWeather);
 
     const [date, setDate] = useState<number>(Date.now());
 
