@@ -55,7 +55,7 @@ const FiveDays: React.FC<DailyProps> = ({ location }) => {
                     currentDate.setDate(currentDate.getDate() + index + 1); //date increase
                     return (
                         <div
-                            className="flex flex-col justify-center items-center  m-2  w-40 h-28 rounded-lg shadow-shadow tracking-wider "
+                            className=" flex flex-col justify-center items-center  m-2  w-40 h-28 rounded-lg shadow-shadow tracking-wider "
                             key={index}>
                             <p>{currentDate.toLocaleDateString()}</p>
                             <p>{(hourlyData.main.temp - 273.15).toFixed(2)}&deg;<span className="text-lg">C</span></p>

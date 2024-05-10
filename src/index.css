@@ -10,3 +10,17 @@
     font-family: "Poetsen One", sans-serif;
     /* font-family: "Poppins", sans-serif; */
 }
+
+/* for opacity to work remove rgba and only put the value 
+write 
+colors: {
+    grape: 'rgba(var(--grape))'
+}
+
+,this in the tailwind config after extend declaring as rgba and it returns opacity as well
+in the className write as bg-grape  and for opacity write as bg-green/{opacity} i.e 1 to 100
+ */
+
+:root {
+    --grape: 21, 235, 50;
+}
