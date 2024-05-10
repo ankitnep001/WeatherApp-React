@@ -33,9 +33,9 @@ const FiveDays: React.FC<DailyProps> = ({ location }) => {
         };
         fetchData();
     }, [location]);
-    console.log("hello");
+    // console.log("hello");
 
-    console.log(hourlyWeather);
+    // console.log(hourlyWeather);
 
     const [date, setDate] = useState<number>(Date.now());
 
