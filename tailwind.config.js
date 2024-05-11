@@ -13,7 +13,6 @@ export default {
       colors: {
         grape: 'rgba(var(--grape))'
       },
-
     },
   },
   plugins: [],

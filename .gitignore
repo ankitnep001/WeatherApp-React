@@ -12,7 +12,6 @@ dist
 dist-ssr
 *.local
 .env
-.eslintric.cjs
 package-lock.json
 
 # Editor directories and files

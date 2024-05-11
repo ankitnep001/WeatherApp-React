@@ -21,8 +21,7 @@ const TodayWeather: React.FC = () => {
 
     return (
         <>
-
-            <div className="mb-4 w-[70dvw]  bg-gray-100  mx-10 flex flex-col justify-center rounded-3xl shadow-xl">
+            <div className="dark:bg-black mb-4 w-[70dvw]  bg-gray-100  mx-10 flex flex-col justify-center rounded-3xl shadow-xl">
                 <DateTime />
                 <div className=" flex flex-col md:flex-row justify-center items-center">
                     <Cities city={city} onCityChange={handleCityChange} />
