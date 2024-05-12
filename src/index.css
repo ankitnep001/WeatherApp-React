@@ -6,7 +6,6 @@
 @tailwind utilities;
 
 * {
-    box-sizing: border-box;
     font-family: "Poetsen One", sans-serif;
     /* font-family: "Poppins", sans-serif; */
 }
