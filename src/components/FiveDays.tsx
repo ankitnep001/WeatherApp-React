@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-
 interface DailyWeather {
     list: {
         main: {
@@ -13,11 +12,9 @@ interface DailyWeather {
 
     }[];
 }
-
 interface DailyProps {
     location: string,
 }
-
 const FiveDays: React.FC<DailyProps> = ({ location }) => {
     const [hourlyWeather, setHourlyWeather] = useState<DailyWeather | null>(null);
     useEffect(() => {
@@ -33,9 +30,6 @@ const FiveDays: React.FC<DailyProps> = ({ location }) => {
         };
         fetchData();
     }, [location]);
-    // console.log("hello");
-
-    // console.log(hourlyWeather);
 
     const [date, setDate] = useState<number>(Date.now());
 

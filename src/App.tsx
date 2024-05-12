@@ -4,9 +4,11 @@ import Home from "./page/Home"
 function App() {
 
   return (
-    <div className='dark:bg-purple-950 h-screen'>
-      <Home />
-    </div>
+    <>
+      <div className='dark:bg-purple-950 md:h-full lg:h-screen'>
+        <Home />
+      </div>
+    </>
   )
 }
 

@@ -8,7 +8,7 @@ const SearchBar: React.FC = ({ }) => {
                 <div className="flex justify-center items-center rounded-xl bg-white border-2 border-black p-2">
                     <input type="text"
                         placeholder="City Name"
-                        className=" h-full bg-none-0 px-2 focus:outline-none"
+                        className="dark:text-black h-full bg-none-0 px-2 focus:outline-none"
                     />
                     <button className="">
                         <AiOutlineSearch size={29} />

@@ -17,7 +17,7 @@ const Cities: React.FC<CityProps> = ({ city, onCityChange }) => {
             <div className='m-3'>
                 <select value={city}
                     onChange={handleCityChange}
-                    className='focus:outline-none rounded-2xl bg-gray-100 border-2 border-black p-2 '>
+                    className='focus:outline-none dark:text-black rounded-2xl bg-gray-100 border-2 border-black p-2 '>
                     <option value="kathmandu">Kathmandu</option>
                     <option value="biratnagar">Biratnagar</option>
                     <option value="pokhara">Pokhara</option>

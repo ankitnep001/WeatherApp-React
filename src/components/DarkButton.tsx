@@ -1,12 +1,24 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 
 const DarkButton = () => {
     const [dark, setDark] = useState<boolean>(false)
 
+    useEffect(() => {
+        const storedDarkMode = localStorage.getItem('isDarkMode');
+        if (storedDarkMode !== null) {
+            setDark(JSON.parse(storedDarkMode));
+            if (JSON.parse(storedDarkMode)) {
+                document.body.classList.add("dark");
+            }
+        }
+    }, []);
+
     const darkModeHandler = () => {
-        setDark(!dark);
+        const newDarkMode = !dark;
+        setDark(newDarkMode);
         document.body.classList.toggle("dark");
+        localStorage.setItem('isDarkMode', JSON.stringify(newDarkMode));
     }
 
     return (
