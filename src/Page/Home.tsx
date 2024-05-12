@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../components/Header'
 import TodayWeather from '../components/TodayWeather'
-// import Footer from '../components/Footer'
+
 
 const Home: React.FC = () => {
     return (
@@ -12,7 +12,7 @@ const Home: React.FC = () => {
                 <TodayWeather />
             </div>
 
-            {/* <Footer /> */}
+
         </>
     )
 }
