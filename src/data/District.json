@@ -1,0 +1,105 @@
+{
+    "provinces": [
+        {
+            "name": "Province 1",
+            "districts": [
+                "Taplejung",
+                "Panchthar",
+                "Ilam",
+                "Jhapa",
+                "Morang",
+                "Sunsari",
+                "Terhathum",
+                "Sankhuwasabha",
+                "Bhojpur",
+                "Dhankuta",
+                "Solukhumbu",
+                "Khotang",
+                "Okhaldhunga",
+                "Udayapur"
+            ]
+        },
+        {
+            "name": "Province 2",
+            "districts": [
+                "Saptari",
+                "Siraha",
+                "Dhanusha",
+                "Mahottari",
+                "Sarlahi",
+                "Bara",
+                "Parsa",
+                "Rautahat"
+            ]
+        },
+        {
+            "name": "Bagmati Province",
+            "districts": [
+                "Sindhuli",
+                "Ramechhap",
+                "Dolakha",
+                "Bhaktapur",
+                "Dhading",
+                "Kathmandu",
+                "Kavre",
+                "Lalitpur",
+                "Nuwakot",
+                "Rasuwa",
+                "Sindhupalchok"
+            ]
+        },
+        {
+            "name": "Gandaki Province",
+            "districts": [
+                "Gorkha",
+                "Lamjung",
+                "Manang",
+                "Mustang",
+                "Myagdi",
+                "Nawalparasi",
+                "Parbat",
+                "Syangja",
+                "Tanahu"
+            ]
+        },
+        {
+            "name": "Lumbini Province",
+            "districts": [
+                "Arghakhanchi",
+                "Gulmi",
+                "Kapilvastu",
+                "Palpa",
+                "Rupandehi",
+                "Nawalpur"
+            ]
+        },
+        {
+            "name": "Karnali Province",
+            "districts": [
+                "Dailekh",
+                "Dolpa",
+                "Humla",
+                "Jajarkot",
+                "Jumla",
+                "Kalikot",
+                "Mugu",
+                "Salyan",
+                "Surkhet"
+            ]
+        },
+        {
+            "name": "Sudurpashchim Province",
+            "districts": [
+                "Achham",
+                "Baitadi",
+                "Bajhang",
+                "Bajura",
+                "Dadeldhura",
+                "Darchula",
+                "Doti",
+                "Kailali",
+                "Kanchanpur"
+            ]
+        }
+    ]
+}

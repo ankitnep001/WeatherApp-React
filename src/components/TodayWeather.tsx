@@ -5,7 +5,6 @@ import WeatherDisplay from "./WeatherDisplay";
 import WeatherImage from "./WeatherImage";
 import FiveDays from "./FiveDays";
 import DateTime from "./DateTime";
-import SearchBar from "./SearchBar";
 import DarkButton from "./DarkButton";
 
 const TodayWeather: React.FC = () => {
@@ -20,14 +19,13 @@ const TodayWeather: React.FC = () => {
     };
     return (
         <>
+            <Api location={city} tempUpdate={setTemp} weatherUpdate={setWeather} descriptionUpdate={setDescription} />
+
             <div className="dark:bg-purple-950 dark:text-white mb-4 bg-gray-100  mx-10 flex flex-col justify-center rounded-3xl shadow-xl">
                 <DateTime />
-                <div className=" flex flex-col md:flex-row justify-center items-center">
-                    <Cities city={city} onCityChange={handleCityChange} />
-                    <SearchBar />
-                </div>
 
-                <Api location={city} tempUpdate={setTemp} weatherUpdate={setWeather} descriptionUpdate={setDescription} />
+                <Cities city={city} onCityChange={handleCityChange} />
+
 
                 <div className="flex flex-col md:flex-row justify-around items-center">
                     {temp !== undefined ? (
