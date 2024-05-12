@@ -38,7 +38,9 @@ const Api: React.FC<ApiProps> = ({ location, tempUpdate, weatherUpdate, descript
         };
         fetchData();
     }, [location, tempUpdate, weatherUpdate]);
-    console.log(weatherData);
+    // console.log(weatherData);
+
+
 
     return null;
 }
