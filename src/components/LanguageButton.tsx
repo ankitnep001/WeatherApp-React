@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { LanguageContext } from '../context/LanguageContext'
 
 import NepalFlag from '../assets/Flag_of_Nepal.svg'
-import EnglishFlag from '../assets/america.svg'
+import EnglishFlag from '../assets/englishlang.svg'
 
 
 
