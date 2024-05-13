@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import BikramSambat, { ADToBS, BSToAD } from "bikram-sambat-js"
 interface DailyWeather {
     list: {
         main: {
@@ -17,6 +18,7 @@ interface DailyProps {
 }
 const FiveDays: React.FC<DailyProps> = ({ location }) => {
     const [hourlyWeather, setHourlyWeather] = useState<DailyWeather | null>(null);
+    // const [nepaliDate, setNepaliDate] = useState<string>('');
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -30,6 +32,22 @@ const FiveDays: React.FC<DailyProps> = ({ location }) => {
         };
         fetchData();
     }, [location]);
+
+    // useEffect(() => {
+    //     const currentDate = new Date();
+    //     const nepaliDate = new BikramSambat(currentDate).toBS();
+    //     setNepaliDate(nepaliDate);
+    // }, []);
+
+    // const getNextNepaliDate = (currentNepaliDate: string, daysToAdd: number): string => {
+    //     const currentDateGregorian = BikramSambat.BSToAD(currentNepaliDate);
+    //     const nextDateGregorian = new Date(currentDateGregorian);
+    //     nextDateGregorian.setDate(nextDateGregorian.getDate() + daysToAdd);
+    //     return BikramSambat.ADToBS(nextDateGregorian);
+    // };
+
+    // const currentDate = new Date();
+    // const nepaliDate = new BikramSambat(currentDate).toBS();
 
     const [date, setDate] = useState<number>(Date.now());
 
@@ -50,6 +68,7 @@ const FiveDays: React.FC<DailyProps> = ({ location }) => {
                 {hourlyWeather && hourlyWeather.list.slice(1, 6).map((hourlyData, index) => {
                     const currentDate = new Date(date);
                     currentDate.setDate(currentDate.getDate() + index + 1); //date increase
+                    // const nextDate = getNextNepaliDate(nepaliDate, index + 1); 
                     return (
                         <div
                             className=" flex flex-col justify-center items-center  m-2  w-40 h-28 rounded-lg shadow-shadow tracking-wider "
@@ -67,4 +86,3 @@ const FiveDays: React.FC<DailyProps> = ({ location }) => {
     )
 }
 export default FiveDays
-

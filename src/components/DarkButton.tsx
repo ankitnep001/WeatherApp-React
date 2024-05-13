@@ -25,7 +25,7 @@ const DarkButton = () => {
         <div className="fixed bottom-0 right-0 m-4">
             <button
                 onClick={darkModeHandler}
-                className="border-2 border-black p-3 rounded-full">
+                className=" border-2 border-black dark:border-white dark:text-white p-3 rounded-full">
                 {dark ? <FaSun /> : <FaMoon />}
             </button>
         </div>
