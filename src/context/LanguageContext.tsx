@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
-import en from '../data/en.json'
-import ne from '../data/ne.json'
+import en from '@data/en.json'
+import ne from '@data/ne.json'
 
 interface LanguageContextType {
     language: string;

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import BikramSambat, { ADToBS, BSToAD } from "bikram-sambat-js"
+// import BikramSambat, { ADToBS, BSToAD } from "bikram-sambat-js"
 interface DailyWeather {
     list: {
         main: {

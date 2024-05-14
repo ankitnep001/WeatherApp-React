@@ -21,11 +21,27 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    // "paths": {
-    //   "@assets/*": [
-    //     "assets/*"
-    //   ]
-    // }
+    "baseUrl": "./src/",
+    "paths": {
+      "@assets/*": [
+        "assets/*"
+      ],
+      "@components/*": [
+        "components/*"
+      ],
+      "@config/*": [
+        "config/*"
+      ],
+      "@context/*": [
+        "context/*"
+      ],
+      "@data/*": [
+        "data/*"
+      ],
+      "@page/*": [
+        "page/*"
+      ]
+    }
   },
   "include": [
     "src"

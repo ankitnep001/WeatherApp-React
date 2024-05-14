@@ -14,13 +14,8 @@ const SearchBar: React.FC = ({ }) => {
                         <AiOutlineSearch size={29} />
                     </button>
                 </div>
-
             </form>
         </>
-
-
-
-
     )
 }
 

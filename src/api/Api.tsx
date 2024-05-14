@@ -23,6 +23,8 @@ interface ApiProps {
 const Api: React.FC<ApiProps> = ({ location, tempUpdate, weatherUpdate, descriptionUpdate }) => {
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
+
+
     const [_weatherData, setWeatherData] = useState<WeatherData | null>(null); // Add state for weatherData
 
 

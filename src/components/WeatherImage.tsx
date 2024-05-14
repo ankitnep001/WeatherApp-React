@@ -1,9 +1,7 @@
 import React from 'react'
-import clear from '../assets/clear.png'
-import clouds from '../assets/Clouds.webp'
-import rainy from '../assets/rainy.png'
-// import windy from '../assets/windy.png'
 
+
+import { image } from '@config/constant/images'
 interface WeatherProps {
     weather: string,
     description: string
@@ -14,13 +12,16 @@ const WeatherImage: React.FC<WeatherProps> = ({ weather, description }) => {
     let weatherImage;
     switch (weather) {
         case 'Clear':
-            weatherImage = clear;
+            weatherImage = image?.clear;
             break;
         case 'Rain':
-            weatherImage = rainy;
+            weatherImage = image?.rainy;
             break;
         case 'Clouds':
-            weatherImage = clouds;
+            weatherImage = image?.cloudy;
+            break;
+        case 'Windy':
+            weatherImage = image?.windy;
             break;
         default:
             weatherImage = null;
@@ -29,7 +30,7 @@ const WeatherImage: React.FC<WeatherProps> = ({ weather, description }) => {
     return (
         <div className='w-[10dvw] flex flex-col justify-between items-center'>
             {weatherImage && <img className='' src={weatherImage} alt={weather} />}
-            <p className='text-xs md:text-lg '>{description}</p>
+            <p className=' text-xs md:text-lg '>{description}</p>
         </div>
     )
 }
