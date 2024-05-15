@@ -7,7 +7,7 @@ interface CityProps {
 }
 
 const Cities: React.FC<CityProps> = ({ city, onCityChange }) => {
-    const [selectProvince, setSelectProvince] = useState<string>("Bagmati Province");
+    const [selectProvince, setSelectProvince] = useState<string>("");
 
     const handleProvinceChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         const province = event.target.value;
@@ -26,7 +26,7 @@ const Cities: React.FC<CityProps> = ({ city, onCityChange }) => {
                 <select value={selectProvince}
                     onChange={handleProvinceChange}
                     className='focus:outline-none dark:text-black rounded-2xl bg-gray-100 border-2 border-black p-2 '>
-                    {/* <option value="" disabled>Select Province</option> */}
+                    <option value="" disabled>Select Province</option>
                     {district.provinces.map((province: { name: string }, index: number) => (
                         <option key={index} value={province.name}>{province.name}</option>
                     ))}
@@ -35,8 +35,8 @@ const Cities: React.FC<CityProps> = ({ city, onCityChange }) => {
             <div className='m-3'>
                 {/* for Discrict */}
                 <select value={city} onChange={handleCityChange} className='focus:outline-none dark:text-black rounded-2xl bg-gray-100 border-2 border-black p-2'>
-                    {/* <option value='' disabled>Select District</option> */}
-                    {district.provinces.find((province: { name: string }) => province.name === selectProvince)?.districts.map((district: string, index: number) => (
+                    <option value='' disabled>Select City</option>
+                    {district.provinces.find((province: { name: string }) => province.name === selectProvince)?.cities.map((district: string, index: number) => (
                         <option key={index} value={district}>{district}</option>
                     ))}
                 </select>

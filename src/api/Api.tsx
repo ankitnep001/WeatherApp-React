@@ -23,15 +23,15 @@ interface ApiProps {
 const Api: React.FC<ApiProps> = ({ location, tempUpdate, weatherUpdate, descriptionUpdate }) => {
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
-
-
     const [_weatherData, setWeatherData] = useState<WeatherData | null>(null); // Add state for weatherData
 
 
     useEffect(() => {
         const fetchData = async () => {
+            setError(null);
             try {
                 const response = await fetch(`${import.meta.env.VITE_WEATHER_API_URL}/weather?q=${location}&appid=${import.meta.env.VITE_API_KEY}`);
+                if (!response.ok) throw new Error('Failed to fetch weather data');
                 const data: WeatherData = await response.json();
                 setWeatherData(data);
                 tempUpdate(data.main.temp);
@@ -39,14 +39,14 @@ const Api: React.FC<ApiProps> = ({ location, tempUpdate, weatherUpdate, descript
                 descriptionUpdate(data.weather[0].description);
 
             } catch (error) {
-                console.error('Error fetching weather data:', error);
+                // console.error('Error fetching weather data:', error);
                 setError('Failed to fetch weather data');
 
             } finally {
                 setLoading(false);
             }
         };
-        fetchData();
+        if (location) fetchData();
     }, [location, tempUpdate, weatherUpdate, descriptionUpdate]);
 
     if (loading) {

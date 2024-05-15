@@ -23,6 +23,8 @@ const FiveDays: React.FC<DailyProps> = ({ location }) => {
         const fetchData = async () => {
             try {
                 const response = await fetch(`${import.meta.env.VITE_WEATHER_API_URL}/forecast?q=${location}&appid=${import.meta.env.VITE_API_KEY}`);
+                if (!response.ok) throw new Error('Failed to fetch weather data');
+
                 const data: DailyWeather = await response.json();
                 setHourlyWeather(data);
 
@@ -30,24 +32,10 @@ const FiveDays: React.FC<DailyProps> = ({ location }) => {
                 console.error('Error fetching weather data:', error);
             }
         };
-        fetchData();
+        if (location) fetchData();
     }, [location]);
 
-    // useEffect(() => {
-    //     const currentDate = new Date();
-    //     const nepaliDate = new BikramSambat(currentDate).toBS();
-    //     setNepaliDate(nepaliDate);
-    // }, []);
 
-    // const getNextNepaliDate = (currentNepaliDate: string, daysToAdd: number): string => {
-    //     const currentDateGregorian = BikramSambat.BSToAD(currentNepaliDate);
-    //     const nextDateGregorian = new Date(currentDateGregorian);
-    //     nextDateGregorian.setDate(nextDateGregorian.getDate() + daysToAdd);
-    //     return BikramSambat.ADToBS(nextDateGregorian);
-    // };
-
-    // const currentDate = new Date();
-    // const nepaliDate = new BikramSambat(currentDate).toBS();
 
     const [date, setDate] = useState<number>(Date.now());
 

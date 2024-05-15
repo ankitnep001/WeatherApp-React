@@ -2,103 +2,65 @@
     "provinces": [
         {
             "name": "Province 1",
-            "districts": [
-                "Taplejung",
-                "Panchthar",
+            "cities": [
+                "Biratnagar",
+                "Dharan",
                 "Ilam",
-                "Jhapa",
-                "Morang",
-                "Sunsari",
-                "Terhathum",
-                "Sankhuwasabha",
-                "Bhojpur",
-                "Dhankuta",
-                "Solukhumbu",
-                "Khotang",
-                "Okhaldhunga",
-                "Udayapur"
+                "Itahari"
             ]
         },
         {
             "name": "Province 2",
-            "districts": [
-                "Saptari",
-                "Siraha",
-                "Dhanusha",
-                "Mahottari",
-                "Sarlahi",
-                "Bara",
-                "Parsa",
-                "Rautahat"
+            "cities": [
+                "Janakpur",
+                "Birgunj",
+                "Lahan",
+                "Rajbiraj"
             ]
         },
         {
             "name": "Bagmati Province",
-            "districts": [
-                "Sindhuli",
-                "Ramechhap",
-                "Dolakha",
-                "Bhaktapur",
-                "Dhading",
+            "cities": [
                 "Kathmandu",
-                "Kavre",
                 "Lalitpur",
-                "Nuwakot",
-                "Rasuwa",
-                "Sindhupalchok"
+                "Bhaktapur",
+                "Hetauda"
             ]
         },
         {
             "name": "Gandaki Province",
-            "districts": [
+            "cities": [
+                "Pokhara",
+                "Baglung",
                 "Gorkha",
-                "Lamjung",
-                "Manang",
-                "Mustang",
-                "Myagdi",
-                "Nawalparasi",
-                "Parbat",
-                "Syangja",
-                "Tanahu"
+                "Lekhnath"
             ]
         },
         {
             "name": "Lumbini Province",
-            "districts": [
-                "Arghakhanchi",
-                "Gulmi",
-                "Kapilvastu",
-                "Palpa",
-                "Rupandehi",
-                "Nawalpur"
+            "cities": [
+                "Butwal",
+                "Bhairahawa",
+                "Tansen",
+                "Kapilvastu"
             ]
         },
         {
             "name": "Karnali Province",
-            "districts": [
-                "Dailekh",
-                "Dolpa",
-                "Humla",
-                "Jajarkot",
+            "cities": [
+                "Surkhet",
                 "Jumla",
                 "Kalikot",
-                "Mugu",
-                "Salyan",
-                "Surkhet"
+                "Dailekh"
             ]
         },
         {
             "name": "Sudurpashchim Province",
-            "districts": [
-                "Achham",
-                "Baitadi",
-                "Bajhang",
-                "Bajura",
+            "cities": [
+                "Dhangadhi",
+                "Mahendranagar",
                 "Dadeldhura",
-                "Darchula",
-                "Doti",
-                "Kailali",
-                "Kanchanpur"
+                "Baitadi"
             ]
         }
     ]
