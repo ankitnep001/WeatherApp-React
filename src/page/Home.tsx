@@ -7,12 +7,9 @@ const Home: React.FC = () => {
     return (
         <>
             <Header />
-
             <div className='flex flex-col justify-center items-center'>
                 <TodayWeather />
             </div>
-
-
         </>
     )
 }

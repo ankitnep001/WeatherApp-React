@@ -9,7 +9,7 @@ interface CityProps {
 }
 
 const LocationSelect: React.FC<CityProps> = ({ city, onCityChange }) => {
-    const [locationType, setLocationType] = useState<string>('Nepal');
+    const [locationType, setLocationType] = useState<string>('International');
 
     const handleLocationTypeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         setLocationType(event.target.value);

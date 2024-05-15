@@ -22,7 +22,7 @@ const DarkButton = () => {
     }
 
     return (
-        <div className="fixed bottom-0 right-0 m-4">
+        <div className="">
             <button
                 onClick={darkModeHandler}
                 className=" border-2 border-black dark:border-white dark:text-white p-3 rounded-full">

@@ -5,11 +5,9 @@ const Header: React.FC = () => {
     const { dictionary } = useContext(LanguageContext)
     return (
         <>
-            <div className='  dark:text-white k text-4xl font-bold text-center  py-5 '>
+            <div className='dark:text-white k text-4xl font-bold text-center  py-5 '>
                 {dictionary.header}
-                {/* Weather Nepal */}
             </div>
-
         </>
     )
 }

@@ -26,7 +26,7 @@ const TodayWeather: React.FC = () => {
 
             <div className="dark:bg-purple-950 dark:text-white mb-4 bg-gray-100  mx-10 flex flex-col justify-center rounded-3xl shadow-xl">
                 <DateTime />
-                <LanguageButton />
+
                 {/* <SearchBar city={city} onCityChange={handleCityChange} /> */}
 
                 {/* <Cities city={city} onCityChange={handleCityChange} /> */}
@@ -44,10 +44,10 @@ const TodayWeather: React.FC = () => {
 
                 <FiveDays location={city} />
             </div>
-
-
-            <DarkButton />
-
+            <div className="fixed bottom-0 right-0 mb-2">
+                <LanguageButton />
+                <DarkButton />
+            </div>
         </>
 
     )
