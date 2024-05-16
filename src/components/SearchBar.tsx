@@ -1,5 +1,6 @@
 import { AiOutlineSearch } from "react-icons/ai";
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { LanguageContext } from "@context/LanguageContext";
 
 interface CityProps {
     city: string,
@@ -8,6 +9,7 @@ interface CityProps {
 
 const SearchBar: React.FC<CityProps> = ({ city, onCityChange }) => {
     const [searchQuery, setSearchQuery] = useState<string>(city);
+    const { dictionary } = useContext(LanguageContext);
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSearchQuery(event.target.value);
@@ -20,13 +22,13 @@ const SearchBar: React.FC<CityProps> = ({ city, onCityChange }) => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <div className="flex justify-center items-center rounded-xl bg-white border-2 border-black p-2">
+            <div className="flex justify-center items-center rounded-2xl bg-white border-2 border-black p-1">
                 <input
                     type="text"
                     value={searchQuery}
                     onChange={handleInputChange}
-                    placeholder="City Name"
-                    className="dark:text-black h-full bg-none-0 px-2 focus:outline-none"
+                    placeholder={dictionary.city_placeholder}
+                    className="dark:text-black h-full bg-none-0 px-2  rounded-2xl focus:outline-none"
                 />
                 <button type="submit" className="">
                     <AiOutlineSearch size={29} color="black" />

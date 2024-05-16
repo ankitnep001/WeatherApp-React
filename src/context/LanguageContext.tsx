@@ -14,7 +14,6 @@ export const LanguageContext = createContext<LanguageContextType>({
     changeLanguage: () => { }
 });
 
-
 interface Props {
     children: React.ReactNode,
 }
@@ -35,6 +34,7 @@ export const LanguageProvider: React.FC<Props> = ({ children }) => {
     useEffect(() => {
         localStorage.setItem("weather_lang", language);
     }, [language]);
+
     return (
         <LanguageContext.Provider value={{ language, dictionary, changeLanguage }}>
             {children}

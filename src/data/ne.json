@@ -1,6 +1,10 @@
 {
     "header": "मौसम नेपाल",
-    "celcius": "सेल्सियस",
+    "celcius": "सेन्टिग्रेड",
+    "//comment": "SELECT OPTION",
+    "nepal": "नेपाल",
+    "international": "अन्तर्राष्ट्रिय",
+    "city_placeholder": "सहरको नाम",
     "fiveDays": "आगामी ५ दिनको मौसम",
     "cloud": "बादल",
     "rain": "वर्षा",

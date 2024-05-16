@@ -7,7 +7,7 @@ interface CityProps {
 }
 
 const Cities: React.FC<CityProps> = ({ city, onCityChange }) => {
-    const [selectProvince, setSelectProvince] = useState<string>("");
+    const [selectProvince, setSelectProvince] = useState<string>("Bagmati Province");
 
     const handleProvinceChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         const province = event.target.value;
@@ -20,7 +20,7 @@ const Cities: React.FC<CityProps> = ({ city, onCityChange }) => {
     };
 
     return (
-        <div className='flex flex-col md:flex-row justify-center items-center'>
+        <div className='flex flex-row justify-center items-center'>
             <div className='m-3'>
                 {/* for province */}
                 <select value={selectProvince}

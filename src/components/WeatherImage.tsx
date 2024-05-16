@@ -30,12 +30,11 @@ const WeatherImage: React.FC<WeatherProps> = ({ weather, description }) => {
             weatherImage = null;
             break;
     }
-    const translatedDescription = dictionary[description.toLowerCase()] || description;
 
     return (
         <div className='w-[10dvw] flex flex-col justify-between items-center'>
             {weatherImage && <img className='' src={weatherImage} alt={weather} />}
-            <p className=' text-xs md:text-lg '>{translatedDescription}</p>
+            <p className=' text-xs md:text-lg '>{dictionary[description] || description}</p>
         </div>
     )
 }

@@ -16,33 +16,36 @@ const TodayWeather: React.FC = () => {
     const [temp, setTemp] = useState<number | undefined>();
     const [weather, setWeather] = useState<string>("");
     const [description, setDescription] = useState<string>("");
+    const [error, setError] = useState<string | null>(null)
 
     const handleCityChange = (city: string) => {
         setCity(city);
+        setError(null);
     };
     return (
         <>
-            <Api location={city} tempUpdate={setTemp} weatherUpdate={setWeather} descriptionUpdate={setDescription} />
+            <Api location={city} tempUpdate={setTemp} weatherUpdate={setWeather} descriptionUpdate={setDescription} onError={setError} />
 
-            <div className="dark:bg-purple-950 dark:text-white mb-4 bg-gray-100  mx-10 flex flex-col justify-center rounded-3xl shadow-xl">
+            <div className="dark:bg-darksecondary dark:text-white mb-4 bg-gray-100  mx-10 flex flex-col justify-center rounded-3xl shadow-xl">
+
                 <DateTime />
-
-                {/* <SearchBar city={city} onCityChange={handleCityChange} /> */}
-
-                {/* <Cities city={city} onCityChange={handleCityChange} /> */}
                 <LocationSelect city={city} onCityChange={handleCityChange} />
 
-                <div className="flex flex-col md:flex-row justify-around items-center">
-                    {temp !== undefined ? (
-                        <WeatherDisplay location={city} temperature={temp} />
-                    ) : (
-                        <p>Loading...</p>
-                    )}
-                    {/* <WeatherDisplay location={city} temperature={temp} /> */}
-                    <WeatherImage weather={weather} description={description} />
-                </div>
+                {!error && (
+                    <div className="flex flex-col md:flex-row justify-around items-center">
+                        {temp !== undefined ? (
+                            <WeatherDisplay location={city} temperature={temp} />
+                        ) : (
+                            <p>Loading...</p>
+                        )}
+                        {/* <WeatherDisplay location={city} temperature={temp} /> */}
+                        <WeatherImage weather={weather} description={description} />
+                    </div>
+                )}
 
-                <FiveDays location={city} />
+
+
+                {!error && <FiveDays location={city} />}
             </div>
             <div className="fixed bottom-0 right-0 mb-2">
                 <LanguageButton />

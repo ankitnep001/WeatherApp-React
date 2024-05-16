@@ -18,9 +18,10 @@ interface ApiProps {
     tempUpdate: (temp: number) => void;
     weatherUpdate: (weather: string) => void,
     descriptionUpdate: (description: string) => void,
+    onError: (error: string) => void;
 }
 
-const Api: React.FC<ApiProps> = ({ location, tempUpdate, weatherUpdate, descriptionUpdate }) => {
+const Api: React.FC<ApiProps> = ({ location, tempUpdate, weatherUpdate, descriptionUpdate, onError }) => {
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
     const [_weatherData, setWeatherData] = useState<WeatherData | null>(null); // Add state for weatherData
@@ -39,8 +40,8 @@ const Api: React.FC<ApiProps> = ({ location, tempUpdate, weatherUpdate, descript
                 descriptionUpdate(data.weather[0].description);
 
             } catch (error) {
-                // console.error('Error fetching weather data:', error);
                 setError('Failed to fetch weather data');
+                onError('Failed to fetch weather data');
 
             } finally {
                 setLoading(false);
@@ -54,7 +55,7 @@ const Api: React.FC<ApiProps> = ({ location, tempUpdate, weatherUpdate, descript
     }
 
     if (error) {
-        return <div>Error: {error}</div>;
+        return <div style={{ color: 'red' }}>Error: {error}</div>;
     }
 
     return null;

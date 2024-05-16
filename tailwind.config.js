@@ -8,12 +8,16 @@ export default {
   theme: {
     extend: {
       boxShadow: {
-        'shadow': '2px 0px 0px 2px rgba(0, 0, 0, 0.2)',
+        'shadow': 'rgba(0, 0, 0, 0.45) 0px 25px 20px - 20px',
       },
       colors: {
-        grape: 'rgba(var(--grape))'
+        grape: 'rgba(var(--grape))',
+        darkprimary: 'rgba(var(--darkprimary))',
+        darksecondary: 'rgba(var(--darksecondary))',
+        darkthird: 'rgba(var(--darkthird))'
       },
     },
   },
   plugins: [],
 }
+

@@ -17,7 +17,7 @@ const WeatherDisplay: React.FC<TemperatureProps> = ({ temperature, location }) =
     }
     return (
         <>
-            <div className='dark:bg-purple-950 dark:text-white m-10 w-52 md:w-96 h-40  bg-green-600  rounded-3xl flex justify-center items-center hover:shadow-2xl'>
+            <div className='dark:bg-darkprimary dark:text-white m-10 w-52 md:w-96 h-40  bg-green-600  rounded-3xl flex justify-center items-center hover:shadow'>
                 <div className=' flex flex-col items-center font-bold text-white '>
                     <p className='text-2xl md:text-4xl font-light tracking-wider'>{displaytemp}&deg;{dictionary.celcius}</p>
                     <p className='text-lg md:text-xl font-light'>{location}</p>

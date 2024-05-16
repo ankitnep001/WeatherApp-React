@@ -1,6 +1,10 @@
 {
     "header": "Weather Nepal",
     "celcius": "Celsius",
+    "//comment": "SELECT OPTION",
+    "nepal": "Nepal",
+    "international": "International",
+    "city_placeholder": "City Name",
     "fiveDays": "Next 5-Days Weather",
     "cloud": "Clouds",
     "rain": "Rain",
