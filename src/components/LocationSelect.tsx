@@ -1,7 +1,7 @@
-import React, { useContext, useState } from 'react'
-import Cities from './Cities'
-import SearchBar from './SearchBar'
 import { LanguageContext } from '@context/LanguageContext';
+import React, { useContext, useState } from 'react';
+import Cities from './Cities';
+import SearchBar from './SearchBar';
 
 interface CityProps {
     city: string,
@@ -21,7 +21,7 @@ const LocationSelect: React.FC<CityProps> = ({ city, onCityChange }) => {
         onCityChange(city);
     };
     return (
-        <div className='flex flex-row justify-center items-center'>
+        <div className='flex flex-col md:flex-row justify-center items-center'>
             <div className='m-3'>
                 <select value={locationType} onChange={handleLocationTypeChange} className='focus:outline-none dark:text-black rounded-2xl bg-gray-100 border-2 border-black p-2'>
                     <option value="Nepal">{dictionary.nepal}</option>

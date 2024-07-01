@@ -27,6 +27,12 @@ in the className write as bg-grape  and for opacity write as bg-green/{opacity} 
     --darkthird: 18, 18, 18, 0.9;
 }
 
+/* @media (min-width: 870px) and (max-width: 1180px) {
+    .full-height {
+        height: 100vh;
+    }
+} */
+
 /* box shadow
 box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
 rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,

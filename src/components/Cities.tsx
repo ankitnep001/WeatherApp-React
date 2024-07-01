@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import district from '../data/District.json'
+import React, { useState } from 'react';
+import district from '../data/District.json';
 
 interface CityProps {
     city: string,
@@ -20,7 +20,7 @@ const Cities: React.FC<CityProps> = ({ city, onCityChange }) => {
     };
 
     return (
-        <div className='flex flex-row justify-center items-center'>
+        <div className='flex flex-col md:flex-row justify-center items-center'>
             <div className='m-3'>
                 {/* for province */}
                 <select value={selectProvince}

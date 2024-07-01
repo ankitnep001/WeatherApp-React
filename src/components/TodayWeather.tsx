@@ -1,12 +1,12 @@
 // import Cities from "./Cities"
-import Api from "../api/Api"
 import { useState } from "react";
+import Api from "../api/Api";
+import DarkButton from "./DarkButton";
+import DateTime from "./DateTime";
+import FiveDays from "./FiveDays";
+import LanguageButton from "./LanguageButton";
 import WeatherDisplay from "./WeatherDisplay";
 import WeatherImage from "./WeatherImage";
-import FiveDays from "./FiveDays";
-import DateTime from "./DateTime";
-import DarkButton from "./DarkButton";
-import LanguageButton from "./LanguageButton";
 // import SearchBar from "./SearchBar";
 import LocationSelect from "./LocationSelect";
 
@@ -23,7 +23,7 @@ const TodayWeather: React.FC = () => {
         setError(null);
     };
     return (
-        <>
+        <div>
             <Api location={city} tempUpdate={setTemp} weatherUpdate={setWeather} descriptionUpdate={setDescription} onError={setError} />
 
             <div className="dark:bg-darksecondary dark:text-white mb-4 bg-gray-100  mx-10 flex flex-col justify-center rounded-3xl shadow-xl">
@@ -51,7 +51,7 @@ const TodayWeather: React.FC = () => {
                 <LanguageButton />
                 <DarkButton />
             </div>
-        </>
+        </div>
 
     )
 }

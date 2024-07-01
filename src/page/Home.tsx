@@ -6,7 +6,7 @@ import TodayWeather from '../components/TodayWeather'
 const Home: React.FC = () => {
     return (
         <>
-            <div className='h-screen '>
+            <div className='full-height w-screen lg:h-screen'>
                 <Header />
                 <div className='flex flex-col justify-center items-center  '>
                     <TodayWeather />
